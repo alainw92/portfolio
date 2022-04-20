@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 
-@import url("_variables.css");
+@import url("variables.css");
 
-@import url("_main.css");
+@import url("main.css");
 
-@import url("_typography.css");
-@import url("_icons.css");
-@import url("_layout.css");
-@import url("_forms.css");
-@import url("_dialogs.css");
+@import url("typography.css");
+@import url("icons.css");
+@import url("layout.css");
+@import url("forms.css");
+@import url("dialogs.css");
 
 @import url("view_mobile.css");
 @import url("view_tablet.css");
