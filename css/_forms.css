@@ -1,0 +1,70 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	box-shadow: 0 0 0 30px var(--bg-dark-color) inset !important;
+	-webkit-box-shadow: 0 0 0 30px var(--bg-dark-color) inset !important;
+}
+input:-webkit-autofill {
+	-webkit-text-fill-color: rgba(255,255,120,0.8) !important;
+}
+
+button {
+	text-transform: uppercase;
+	background: none;
+	border: thin solid var(--primary-color);
+	color: var(--primary-color);
+	padding: calc(var(--base-spacing) * 2);
+	margin: 0;
+	/*white-space: nowrap;
+	overflow: hidden;
+	*/
+	border-radius: var(--base-spacing);
+	transition: color var(--transition-speed), border-color var(--transition-speed);
+	-webkit-transition: color var(--transition-speed), border-color var(--transition-speed);
+	-moz-transition: color var(--transition-speed), border-color var(--transition-speed);
+	-ms-transition: color var(--transition-speed), border-color var(--transition-speed);
+	-o-transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+button:hover {
+	border-color: var(--accent-color);
+	color: var(--accent-color);
+	cursor: pointer;
+}
+button:focus {
+	border-color: var(--focus-color);
+	color: var(--focus-color);
+	cursor: pointer;
+	outline: none;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: calc(var(--base-spacing) * 2);
+	margin: 0;
+	background: none;
+	color: var(--accent-color);
+	font-family: var(--base-font-family);
+	font-size: 1em;
+	border: thin solid var(--primary-color);
+	border-radius: var(--base-spacing);
+	-webkit-border-radius: var(--base-spacing);
+	-moz-border-radius: var(--base-spacing);
+	-ms-border-radius: var(--base-spacing);
+	-o-border-radius: var(--base-spacing);
+	transition: color var(--transition-speed), border-color var(--transition-speed);
+	-webkit-transition: color var(--transition-speed), border-color var(--transition-speed);
+	-moz-transition: color var(--transition-speed), border-color var(--transition-speed);
+	-ms-transition: color var(--transition-speed), border-color var(--transition-speed);
+	-o-transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+input:hover,
+textarea:hover {
+	border-color: var(--accent-color);
+}
+input:focus,
+textarea:focus {
+	border-color: var(--focus-color);
+	outline: none;
+}

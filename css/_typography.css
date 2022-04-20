@@ -1,0 +1,140 @@
+/* FONT FAMILY */
+body,
+button,
+input {
+	font-size: var(--base-font-size);
+	font-family: var(--base-font-family);
+	color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: calc(var(--base-spacing) * 4);
+	padding-bottom: var(--base-spacing);
+	font-family: var(--title-font-family);
+	color: var(--accent-color);
+}
+
+h1 {
+	font-size: calc(var(--base-font-size) * 2);
+}
+
+p {
+	text-indent: 1em;
+	text-align: justify;
+	margin: calc(var(--base-spacing) * 3) 0;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+	transition: color var(--transition-speed);
+	-webkit-transition: color var(--transition-speed);
+	-moz-transition: color var(--transition-speed);
+	-ms-transition: color var(--transition-speed);
+	-o-transition: color var(--transition-speed);
+}
+p a, a.in-text {
+	color: var(--accent-color);
+}
+a:hover {
+	text-decoration: none;
+	color: var(--hover-color);
+}
+a:focus {
+	text-decoration: none;
+	color: var(--hover-color);
+}
+a:active {
+	text-decoration: none;
+	color: var(--accent-color);
+}
+.link--active {
+	text-decoration: none;
+	color: var(--accent-color);
+}
+
+/* CLASES */
+
+.text-center {
+	text-align: center;
+}
+
+.font-weight-bold {
+	font-weight: 700;
+}
+
+.font-weight-light {
+	font-weight: 300;
+}
+
+.font-italic {
+	font-style: italic;
+}
+
+.font-bigger {
+	font-size: 1.2em !important;
+}
+
+.font-normal {
+	font-size: 1em !important;
+}
+
+.font-smaller {
+	font-size: 0.8em !important;
+}
+
+.line-height-1 {
+	line-height: 1em !important;
+}
+
+.no-underline {
+	text-decoration: none !important;
+}
+
+.multi-line {
+	white-space: pre-line;
+}
+
+.break-word {
+	word-break: break-all;
+}
+
+.no-select {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+.error--text {
+	color: var(--error-color);
+}
+
+
+/* LISTS */
+.main-menu-list,
+.header-menu-list,
+.technology-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.header-menu-list {
+	display: flex;
+	justify-content: end;
+}
+
+.header-menu-list a {
+	display: block;
+}

@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	scrollbar-color: var(--primary-color) var(--bg-light-color);
+	scrollbar-width: thin;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: calc(var(--base-spacing) * 2);
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-light-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+	border-radius: var(--base-spacing);
+	border: var(--base-spacing) solid var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--accent-color);
+}
+
+.scroll-y-wrapper {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.scroll-x-wrapper {
+	overflow-x: auto;
+	white-space: nowrap;
+	width: 100%;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+	background: var(--bg-dark-color);
+	margin: 0;
+	padding: calc(var(--base-spacing) * 3) calc(var(--base-spacing) * 4);
+}
+
+.bg {
+	position: fixed;
+	z-index: -2;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+
+.bg::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100vh;
+	height: 100vh;
+	background-image: radial-gradient(circle, var(--bg-light-color) 0%, var(--bg-dark-color) 70%);
+	background-origin: border-box;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	transform: translate(-70%, 10%) rotate(-45deg) scale(3, 1.8);
+	-webkit-transform: translate(-70%, 10%) rotate(-45deg) scale(3, 1.8);
+	-moz-transform: translate(-70%, 10%) rotate(-45deg) scale(3, 1.8);
+	-ms-transform: translate(-70%, 10%) rotate(-45deg) scale(3, 1.8);
+	-o-transform: translate(-70%, 10%) rotate(-45deg) scale(3, 1.8);
+}
+
+noscript {
+	position: absolute;
+	top: calc(var(--base-font-size) * 3 + var(--base-spacing));
+	left: 0;
+	right: 0;
+	background-color: var(--bg-dark-color);
+	color: var(--warning-color);
+	font-size: smaller;
+	text-indent: 1em;
+	text-align: justify;
+	margin: 0 calc(var(--base-spacing) * 3);
+	padding: calc(var(--base-spacing) * 2);
+	border: thin solid var(--warning-color);
+	border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	z-index: 1;
+}

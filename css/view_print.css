@@ -1,0 +1,7 @@
+@media print {
+	.tech-icon,
+	.contact-form-container,
+	.privacy-link {
+		display: none;
+	}
+}

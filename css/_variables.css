@@ -1,0 +1,26 @@
+:root {
+	--base-spacing: 4px;
+	--transition-speed: 0.3s;
+	--base-font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	--base-font-size: 18px;
+	--title-font-family: "Poiret One", sans-serif;
+
+	--primary-color: rgba(150, 185, 193, 0.8);
+	--accent-color: rgb(122, 202, 219);
+	--accent-color-op10: rgba(122, 202, 219, 0.1);
+	--hover-color: #ffffff;
+	--focus-color: #ffffff;
+	--error-color: #ff0000;
+	--warning-color: orange;
+	--bg-light-color: #1f3037;
+	--bg-light-color-op75: rgba(31, 48, 55, 0.75);
+	--bg-dark-color: #061216;
+
+	--html-color: #f16528;
+	--css-color: #2a66f1;
+	--js-color: #f7de1d;
+	--vue-color: #49b180;
+	--node-color: #7dc327;
+	--graphql-color: #d933a2;
+	--mongodb-color: #03df62;
+}

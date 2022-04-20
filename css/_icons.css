@@ -1,0 +1,33 @@
+.icon-desc {
+	display: none;
+}
+.icon-md {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1em;
+	font-size: calc(var(--base-font-size) * 2);
+	margin: 0 calc(var(--base-spacing) * 2);
+}
+
+/* ICONS SVG */
+
+.icon-graphql {
+	display: block;
+	height: 1.2em;
+	width: 1em;
+	background-image: url('../assets/icon-graphql.svg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.icon-mongodb {
+	display: block;
+	height: 1.2em;
+	width: 1em;
+	background-image: url('../assets/icon-mongodb.svg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
