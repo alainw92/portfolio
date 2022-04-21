@@ -27,8 +27,15 @@ function matchLinkActive(scrollPos) {
 			target = "body";
 		}
 		let scrollOffset = $(target)[0].offsetTop;
+		let changeOffset = scrollOffset - windowHeight / 2;
+		let documentHeight = $("body")[0].clientHeight;
+		let countItems = $(".main-menu-list .menu-link").length;
 
-		if (scrollPos >= scrollOffset - 300) {
+		if (scrollPos >= changeOffset) {
+			$(".main-menu-list .menu-link").removeClass("link--active");
+			$(el).addClass("link--active");
+		}
+		if (scrollPos >= documentHeight - windowHeight - 50 && countItems === i + 1) {
 			$(".main-menu-list .menu-link").removeClass("link--active");
 			$(el).addClass("link--active");
 		}
@@ -62,6 +69,7 @@ $(function () {
 			windowHeight = window.innerHeight;
 
 			toggleScrollBtn(scrollPosition);
+			matchLinkActive(scrollPosition);
 		})
 	);
 

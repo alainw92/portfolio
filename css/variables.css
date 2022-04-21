@@ -1,5 +1,9 @@
 :root {
+	--page-min-width: 900px;
+	--menu-width: 200px;
+	--ornam-margin: 24px;
 	--base-spacing: 4px;
+
 	--transition-speed: 0.3s;
 	--base-font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	--base-font-size: 18px;

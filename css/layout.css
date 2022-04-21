@@ -31,7 +31,7 @@ figure {
 	overflow: hidden;
 }
 .space {
-	height: calc(var(--base-spacing) * 12);
+	height: calc(var(--base-spacing) * 36);
 }
 
 

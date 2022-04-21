@@ -1,4 +1,5 @@
 # Dependency directories
+_obsolete/
 node_modules/
 jspm_packages/
 

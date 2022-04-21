@@ -31,6 +31,7 @@ p {
 }
 
 a {
+	cursor: pointer;
 	text-decoration: none;
 	color: var(--primary-color);
 	transition: color var(--transition-speed);
@@ -118,6 +119,9 @@ a:active {
 
 .error--text {
 	color: var(--error-color);
+}
+.accent--text {
+	color: var(--accent-color);
 }
 
 

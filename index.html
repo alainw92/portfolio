@@ -58,13 +58,6 @@
 				<li><a class="menu-link" href="#projects">realizacje</a></li>
 				<li><a class="menu-link" href="#tech">technologie</a></li>
 				<li><a class="menu-link" href="#contact">kontakt</a></li>
-				<li class="dummy-link"></li>
-				<li class="lang-container font-smaller">
-					<div class="d-flex justify-center align-end full-height">
-						<a href="#" class="mx-2 link--active">PL</a>
-						<a href="#" class="mx-2">ENG</a>
-					</div>
-				</li>
 			</ul>
 		</nav>
 		<div class="aside__ornament" aria-hidden="true">
@@ -97,11 +90,13 @@
 		<!-- about -->
 		<section class="section-about">
 			<h2 id="about">o mnie</h2>
-			<p class="plain-text">Jestem nie tylko programistą. Dzięki technicznemu wykształceniu (mechanika i budowa maszyn na Politechnice Rzeszowskiej) i kilkuletniemu doświadczeniu w przemyśle potrafię dobrze zrozumieć potrzeby klienta z tego sektora. </p>
-			<p class="plain-text">Chociaż w tej chwili pracuję w przemyśle motoryzacyjnym to programowanie, obok mechaniki, od dawna jest obecne w kręgu
-			moich zainteresowań. Swoje pierwsze strony internetowe tworzyłem w wieku 15 lat, a jedna z nich funkcjonuje do dziś w
-			praktycznie niezmienionym kształcie 😊</p>
-			<p class="plain-text">Obie powyższe pasje zawodowe udało mi się jednak połączyć. Projektem, z którego jestem najbardziej zadowolony jest stworzona przeze mnie dedykowana aplikacja do zarządzania produkcją. Składa się z kilku modułów: sprzedaż, zarządzanie produktami, planowanie produkcji, magazyn i wysyłki. Wiosną 2022 roku program został zaimplementowany klienta.</p>
+			<div class="about-content">
+				<p class="plain-text">Jestem nie tylko programistą. Dzięki technicznemu wykształceniu (mechanika i budowa maszyn na Politechnice Rzeszowskiej) i kilkuletniemu doświadczeniu w przemyśle potrafię dobrze zrozumieć potrzeby klienta z tego sektora. </p>
+				<p class="plain-text">Chociaż w tej chwili pracuję w przemyśle motoryzacyjnym to programowanie, obok mechaniki, od dawna jest obecne w kręgu
+				moich zainteresowań. Swoje pierwsze strony internetowe tworzyłem w wieku 15 lat, a jedna z nich funkcjonuje do dziś w
+				praktycznie niezmienionym kształcie 😊</p>
+				<p class="plain-text">Obie powyższe pasje zawodowe udało mi się jednak połączyć. Projektem, z którego jestem najbardziej zadowolony jest stworzona przeze mnie dedykowana aplikacja do zarządzania produkcją. Składa się z kilku modułów: sprzedaż, zarządzanie produktami, planowanie produkcji, magazyn i wysyłki. Wiosną 2022 roku program został zaimplementowany klienta.</p>
+			</div>
 		</section>
 
 		<div class="space"></div>
@@ -111,54 +106,75 @@
 			<h2 id="projects">realizacje</h2>
 			<article>
 				<h3>&gt; aplikacje</h3>
-				<div>
+				<div class="projects-apps project-list-container">
 					<figure class="project-card">
-						<figcaption>
+						<figcaption class="accent--text">
 							System zarządzania produkcją
 						</figcaption>
 						<div class="project-date"><i class="fas fa-calendar mr-1 "></i> 2022</div>
 						<div class="project-description">
-							<p class="plain-text">
-							Moduły:</p>
-							<ul class="my-0">
-								<li>Zarządzanie produktami</li>
-								<li>Planowanie produkcji</li>
-								<li>Magazyn materiałów</li>
-								<li>Magazyn półproduktów</li>
-								<li>Magazyn wyrobów gotowych</li>
-								<li>Wysyłki</li>
-								<li>Sprzedaż</li>
-							</ul>
-							<p class="plain-text">
-							Technologie: HTML, CSS, JS, Vue.js, Node.js, GraphQL, MongoDB
-							</p>
+							<div>
+								<div>
+									<h4>Opis projektu</h4>
+									<p class="plain-text">Aplikacja do zarządzania produkcją firmy z sektora MŚP. Pozwala na planowanie produkcji zespołów części z uwzględnieniem konfliktów między maszynami i pracownikami, generowanie dokumentów produkcyjnych, zarządzanie zleceniami produkcyjnymi, tworzenie struktury produktów (tzw. BOM) wraz z definicją i walidacją składowych technologii wytwarzania. Poza tym, wbudowany moduł magazynu służy do zarządzania zasobami produkcyjnymi (materiały, części zakupowe bezpośrednio produkcyjne), częściami w trakcie produkcji (magazyn półproduktów) oraz wyrobami gotowymi (pakowanie, wysyłki wraz z generowaniem dowodów dostaw). Wbudowano również moduł sprzedażowy (zamówienia + podsumowanie sprzedaży). Aplikacja jest użytkowana w wewnętrznej sieci firmowej.</p>
+									<h4>Moduły</h4>
+									<ul class="mt-0">
+										<li>Zarządzanie produktami</li>
+										<li>Planowanie produkcji</li>
+										<li>Magazyn materiałów</li>
+										<li>Magazyn półproduktów</li>
+										<li>Magazyn wyrobów gotowych</li>
+										<li>Wysyłki</li>
+										<li>Sprzedaż</li>
+									</ul>
+									<h4>Z technicznej strony</h4>
+									<h5>Backend</h5>
+									<p>Zbudowany w Node.js. Do komunikacji służy GraphQL + klasyczne REST API. Uwierzytelnienie użytkowników oparte o JSON Web Token. Użyta baza danych to MongoDB. Wykorzystuje operacje CRUD, operacje na plikach, automatyczne generowanie PDF.</p>
+									<h5>Frontend</h5>
+									<p>Zbudowany w Vue.js 2. Wykorzystuje bibliotekę Vuetify (Material Design). Używa Vue Router, Vuex, Vuelidate oraz Vue Apollo (komunikacja GraphQL). Rysowanie wykresów wspierane przez Chart.js.</p>
+								</div>
+								<div>
+									<h4>Technologie</h4>
+									<p class="plain-text">
+										HTML, CSS, JS, Vue.js, Node.js, GraphQL, MongoDB
+									</p>
+								</div>
+							</div>
+							<img width="250px" max-height="250px" src="assets/app1.jpg" alt="">
 						</div>
-						<img width="250px" max-height="250px" src="assets/app1.jpg" alt="">
 					</figure>
 				</div>
 			</article>
 			<article>
-				<h3>&gt; strony internetowe</h3>
-				<div>
+				<h3>&gt; strony internetowe - przykłady</h3>
+				<div class="projects-websites project-list-container">
 					<figure class="project-card">
 						<figcaption>
 							<a href="https://www.meese.pl" class="in-text" target="_blank">https://meese.pl</a>
 						</figcaption>
 						<div class="project-date"><i class="fas fa-calendar-check mr-1 "></i> 2021</div>
-						<p class="plain-text project-description">
-							Technologia: Vue.js
-						</p>
+						<div class="project-description">
+						<div>
+							<p class="plain-text">
+								Technologia: Vue.js
+							</p>
+						</div>
 						<img width="250px" max-height="250px" src="assets/site1.jpg" alt="">
+						</div>
 					</figure>
 					<figure class="project-card">
 						<figcaption>
 							<a href="http://www.ziz-ngil.pl" class="in-text" target="_blank">http://ziz-ngil.pl</a>
 						</figcaption>
 						<div class="project-date"><i class="fas fa-calendar-check mr-1 "></i> 2018</div>
-						<p class="plain-text project-description">
-							Design klienta. Technologie: HTML, CSS, JS + PHP
-						</p>
-						<img width="250px" max-height="250px" src="assets/site3.jpg" alt="">
+						<div class="project-description">
+							<div>
+								<p class="plain-text">
+									Design klienta. Technologie: HTML, CSS, JS + PHP
+								</p>
+							</div>
+							<img width="250px" max-height="250px" src="assets/site3.jpg" alt="">
+						</div>
 					</figure>
 					<figure class="project-card">
 						<figcaption>
@@ -166,14 +182,16 @@
 						</figcaption>
 						<div class="project-date"><i class="fas fa-calendar-check mr-1 "></i> 2007</div>
 						<div class="project-description">
-							<p class="plain-text">
-								Jedna z pierwszych stworzonych przeze mnie stron. Miałem wtedy 15 lat. Działa do dziś :)
-							</p>
-							<p class="plain-text">
-								Tochnologia: HTML (na tabelkach) + CSS
-							</p>
+							<div>
+								<p class="plain-text">
+									Jedna z pierwszych stworzonych przeze mnie stron. Miałem wtedy 15 lat. Działa do dziś :)
+								</p>
+								<p class="plain-text">
+									Tochnologia: HTML (na tabelkach) + CSS
+								</p>
+							</div>
+							<img width="250px" max-height="250px" src="assets/site2.jpg" alt="">
 						</div>
-						<img width="250px" max-height="250px" src="assets/site2.jpg" alt="">
 					</figure>
 				</div>
 			</article>
@@ -214,32 +232,14 @@
 										class="fab fa-facebook-messenger mr-2"></i></span> Messenger</a></div>
 					</div>
 				</div>
-				<div class="contact-form-container">
-					<h4 class="d-none">Formularz kontaktowy</h4>
-					<form action="/" id="contact-form">
-						<div class="my-4">
-							<label for="form-email">Twój mail *</label>
-							<div class="mt-2">
-								<input type="email" name="email" id="form-email">
-							</div>
-						</div>
-						<div class="my-4">
-							<label for="form-content">Wiadomość *</label>
-							<div class="mt-2">
-								<textarea name="content" id="form-content" cols="30" rows="16"></textarea>
-							</div>
-						</div>
-						<button type="submit" id="form-submit-btn">Wyślij</button>
-					</form>
-				</div>
 			</div>
 		</section>
+
+		<div class="space"></div>
 	</main>
 
-	<div class="space"></div>
-
 	<footer id="footer">
-		<div class="text-center mb-1 font-smaller privacy-link"><a id="privacy-dialog-trigger" class="in-text" href="#privacy">Polityka prywatności</a></div>
+		<div class="text-center mb-1 font-smaller privacy-link"><a id="privacy-dialog-trigger" class="in-text">Polityka prywatności</a></div>
 		<div class="text-center mb-2">&copy; 2022 Alan Wnęk. All rights reserved</div>
 	</footer>
 
@@ -249,7 +249,7 @@
 			<article class="dialog-content">
 				<h2>polityka prywatności</h2>
 				<p>Niniejsza polityka prywatności i plików cookies opisuje zasady postępowania z danymi osobowymi oraz wykorzystywania
-				plików cookies i innych technologii w ramach strony internetowej <a href="https://xxx.xx">https://xxx.xx</a>
+				plików cookies i innych technologii w ramach strony internetowej <a href="https://alanwnek.com.pl">https://alanwnek.com.pl</a>
 				Administratorem strony jest Alan Wnęk. Kontakt z administratorem możliwy pod adresem e-mail alan.wnek@gmail.com.</p>
 				
 				<h4>§1 Definicje</h4>
@@ -257,7 +257,7 @@
 					<li>Na potrzeby niniejszej polityki prywatności, przyjmuje się następujące znaczenie poniższych pojęć:
 						<ol type="a">
 							<li>Administrator – Alan Wnęk (alan.wnek@gmail.com)</li>
-							<li>Strona – strona internetowa dostępna pod adresem <a href="https://xxx.xx">https://xxx.xx</a></li>
+							<li>Strona – strona internetowa dostępna pod adresem <a class="in-text" href="https://alanwnek.com.pl">https://alanwnek.com.pl</a></li>
 							<li>Użytkownik – każdy podmiot, który korzysta ze Strony.</li>
 						</ol>
 					</li>
@@ -265,8 +265,8 @@
 				
 				<h4>§2 Dane osobowe</h4>
 				<ol>
-					<li class="plain-text">Użytkownik może przekazywać swoje dane osobowe Administratorowi za pomocą formularzy dostępnych na Stronie, np poprze
-					formularz kontaktowy.</li>
+					<li class="plain-text">Użytkownik może przekazywać swoje dane osobowe Administratorowi za pomocą form kontaktu udostępnionych na stronie, np poprzez
+					e-mail.</li>
 					<li class="plain-text">Administratorem danych osobowych Użytkownika jest Administrator.</li>
 					<li class="plain-text">Administrator gwarantuje poufność wszelkich przekazanych mu danych osobowych.</li>
 					<li class="plain-text">Podanie danych jest zawsze dobrowolne, ale niezbędne do podjęcia przez Użytkownika akcji, do której przeznaczony jest
@@ -283,28 +283,11 @@
 							<li class="plain-text">prawo do wniesienia skargi do organu nadzorczego w związku z przetwarzaniem danych osobowych przez Administratora</li>
 						</ol>
 					</li>
-					<li>
-						Administrator informuje niniejszym Użytkownika, że powierza przetwarzanie danych osobowych następującym podmiotom:
-						<ol type="a">
-							<li>(SENDGRID, adres) – w celu korzystania z systemu mailingowego, służącego do obsługi formularza kontaktowego.</li>
-						</ol>
-					</li>
 				</ol>
 				
 				<h4>§3 Pliki cookies</h4>
 				<ol>
-					<li class="plain-text">Administrator wykorzystuje pliki cookies (ciasteczka), czyli niewielkie informacje tekstowe, przechowywane na
-					urządzeniu końcowym Użytkownika (np. komputerze, tablecie, smartfonie). Cookies mogą być odczytywane przez system
-					teleinformatyczny Administratora.</li>
-					<li class="plain-text">Administrator przechowuje pliki cookies na urządzeniu końcowym Użytkownika, a następnie uzyskuje dostęp do informacji
-					w nich zawartych w celach statystycznych, w celach marketingowych (remarketing, odzyskiwanie porzuconych koszyków) oraz
-					w celu zapewnienia prawidłowego działania Strony.</li>
-					<li class="plain-text">Administrator informuje niniejszym Użytkownika, że istnieje możliwość takiej konfiguracji przeglądarki internetowej,
-					która uniemożliwia przechowywanie plików cookies na urządzeniu końcowym Użytkownika. W takiej sytuacji, korzystanie ze
-					Strony przez Użytkownika może być utrudnione.</li>
-					<li class="plain-text">Administrator wskazuje niniejszym, że pliki cookies mogą być przez Użytkownika usunięte po ich zapisaniu przez
-					Administratora, poprzez odpowiednie funkcje przeglądarki internetowej, programy służące w tym celu lub skorzystanie z
-					odpowiednich narzędzi dostępnych w ramach systemu operacyjnego, z którego korzysta Użytkownik.</li>
+					<li class="plain-text">Strona nie wykorzystuje plików cookies (tzw. ciasteczek).</li>
 				</ol>
 				
 				<h4>§4 Logi serwera</h4>

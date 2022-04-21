@@ -104,7 +104,7 @@
 	padding: calc(var(--base-spacing));
 }
 #menu-trigger:checked~#aside-panel .main-menu-list li:last-child {
-	height: calc(3em + var(--base-spacing) * 2);
+	/* height: calc(3em + var(--base-spacing) * 2); */
 	padding-bottom: calc(var(--base-spacing) * 3);
 	border-bottom: thin solid var(--primary-color);
 }
