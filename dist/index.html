@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Alan Wnęk">
+	<!-- <meta name="robots" content="noindex"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	
+	<title>Alan Wnęk - Portfolio</title>
+  <script type="module" crossorigin src="/assets/index.a7185f5f.js"></script>
+  <link rel="stylesheet" href="/assets/index.330bab89.css">
+</head>
+<body>
+	<noscript>
+		Wykryto wyłączony JavaScript w&nbsp;przeglądarce. Proszę mieć na uwadze, że interaktywne elementy na stronie nie będą działać prawidłowo.
+	</noscript>
+	<div class="bg"></div>
+
+	<header class="main-header">
+		<h3 class="d-none">szybki kontakt</h3>
+		<ul class="header-menu-list">
+			<li>
+				<a href="mailto:alan.wnek@gmail.com" target="_blank">
+					<span class="icon-md"><i class="fas fa-envelope"></i></span>
+					<span class="icon-desc">Wyślij e-mail</span>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/in/alan-wn%C4%99k-797789150/" target="_blank">
+					<span class="icon-md"><i class="fab fa-linkedin"></i></span>
+					<span class="icon-desc">LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.facebook.com/alainw92/" target="_blank">
+					<span class="icon-md"><i class="fab fa-facebook-messenger"></i></span>
+					<span class="icon-desc">Messenger</span>
+				</a>
+			</li>
+		</ul>
+	</header>
+
+	<!-- Hamburger Menu -->
+	<input id="menu-trigger" type="checkbox">
+	<label for="menu-trigger" class="menu-btn menu-open"><span class="icon-md"><i class="fas fa-bars"></i></span></label>
+	<label for="menu-trigger" class="menu-btn menu-close"><span class="icon-md"><i class="fas fa-times"></i></span></label>
+
+	<!-- main menu -->
+	<aside class="aside" id="aside-panel" aria-label="Panel boczny">
+		<nav class="nav" aria-label="Menu" role="navigation">
+			<h3 class="nav-title">menu</h3>
+			<ul class="main-menu-list">
+				<li><a class="menu-link" href="#">start</a></li>
+				<li><a class="menu-link" href="#about">o mnie</a></li>
+				<li><a class="menu-link" href="#projects">realizacje</a></li>
+				<li><a class="menu-link" href="#tech">technologie</a></li>
+				<li><a class="menu-link" href="#contact">kontakt</a></li>
+			</ul>
+		</nav>
+		<div class="aside__ornament" aria-hidden="true">
+			<div class="aside__ornament__upper"></div>
+			<div class="aside__ornament__arrow"></div>
+			<div class="aside__ornament__lower"></div>
+		</div>
+	</aside>
+
+	<main>
+		<!-- start -->
+		<section class="section-start relative">
+			<h3 class="d-none">strona startowa</h3>
+			<figure>
+				<img width="200px" max-height="200px" class="profile-photo" src="/assets/profile.e68a088f.jpg" alt="Zdjęcie profilowe">
+				<figcaption>
+					<p class="plain-text">Nazywam się</p>
+					<h1 class="text-center">Alan Wnęk</h1>
+					<p class="plain-text">Tworzę strony internetowe i aplikacje webowe. Przewiń stronę i dowiedz się więcej...</p>
+				</figcaption>
+			</figure>
+			<div id="scroll-down-btn">
+				<a href="#about" class="d-block scroll-icon-box">
+					<div class="font-smaller font-italic mb-2">przewiń</div>
+					<i class="fas fa-arrow-down"></i>
+				</a>
+			</div>
+		</section>
+
+		<!-- about -->
+		<section class="section-about">
+			<h2 id="about">o mnie</h2>
+			<div class="about-content">
+				<p class="plain-text">Jestem nie tylko programistą. Dzięki technicznemu wykształceniu (mechanika i budowa maszyn na Politechnice Rzeszowskiej) i kilkuletniemu doświadczeniu w przemyśle potrafię dobrze zrozumieć potrzeby klienta z tego sektora. </p>
+				<p class="plain-text">Chociaż w tej chwili pracuję w przemyśle motoryzacyjnym to programowanie, obok mechaniki, od dawna jest obecne w kręgu
+				moich zainteresowań. Swoje pierwsze strony internetowe tworzyłem w wieku 15 lat, a jedna z nich funkcjonuje do dziś w
+				praktycznie niezmienionym kształcie 😊</p>
+				<p class="plain-text">Obie powyższe pasje zawodowe udało mi się jednak połączyć. Projektem, z którego jestem najbardziej zadowolony jest stworzona przeze mnie dedykowana aplikacja do zarządzania produkcją. Składa się z kilku modułów: sprzedaż, zarządzanie produktami, planowanie produkcji, magazyn i wysyłki. Wiosną 2022 roku program został zaimplementowany klienta.</p>
+			</div>
+		</section>
+
+		<div class="space"></div>
+
+		<!-- projects -->
+		<section class="section-projects">
+			<h2 id="projects">realizacje</h2>
+			<article>
+				<h3>&gt; aplikacje</h3>
+				<div class="projects-apps project-list-container">
+					<figure class="project-card">
+						<figcaption class="accent--text">
+							System zarządzania produkcją
+						</figcaption>
+						<div class="project-date"><i class="fas fa-calendar mr-1 "></i> 2022</div>
+						<div class="project-description">
+							<div>
+								<div>
+									<h4>Opis projektu</h4>
+									<p class="plain-text">Aplikacja do zarządzania produkcją firmy z sektora MŚP. Pozwala na planowanie produkcji zespołów części z uwzględnieniem konfliktów między maszynami i pracownikami, generowanie dokumentów produkcyjnych, zarządzanie zleceniami produkcyjnymi, tworzenie struktury produktów (tzw. BOM) wraz z definicją i walidacją składowych technologii wytwarzania. Poza tym, wbudowany moduł magazynu służy do zarządzania zasobami produkcyjnymi (materiały, części zakupowe bezpośrednio produkcyjne), częściami w trakcie produkcji (magazyn półproduktów) oraz wyrobami gotowymi (pakowanie, wysyłki wraz z generowaniem dowodów dostaw). Wbudowano również moduł sprzedażowy (zamówienia + podsumowanie sprzedaży). Aplikacja jest użytkowana w wewnętrznej sieci firmowej.</p>
+									<h4>Moduły</h4>
+									<ul class="mt-0">
+										<li>Zarządzanie produktami</li>
+										<li>Planowanie produkcji</li>
+										<li>Magazyn materiałów</li>
+										<li>Magazyn półproduktów</li>
+										<li>Magazyn wyrobów gotowych</li>
+										<li>Wysyłki</li>
+										<li>Sprzedaż</li>
+									</ul>
+									<h4>Z technicznej strony</h4>
+									<h5>Backend</h5>
+									<p>Zbudowany w Node.js. Do komunikacji służy GraphQL + klasyczne REST API. Uwierzytelnienie użytkowników oparte o JSON Web Token. Użyta baza danych to MongoDB. Wykorzystuje operacje CRUD, operacje na plikach, automatyczne generowanie PDF.</p>
+									<h5>Frontend</h5>
+									<p>Zbudowany w Vue.js 2. Wykorzystuje bibliotekę Vuetify (Material Design). Używa Vue Router, Vuex, Vuelidate oraz Vue Apollo (komunikacja GraphQL). Rysowanie wykresów wspierane przez Chart.js.</p>
+								</div>
+								<div>
+									<h4>Technologie</h4>
+									<p class="plain-text">
+										HTML, CSS, JS, Vue.js, Node.js, GraphQL, MongoDB
+									</p>
+								</div>
+							</div>
+							<img width="250px" max-height="250px" src="/assets/app1.6c437711.jpg" alt="">
+						</div>
+					</figure>
+				</div>
+			</article>
+			<article>
+				<h3>&gt; strony internetowe - przykłady</h3>
+				<div class="projects-websites project-list-container">
+					<figure class="project-card">
+						<figcaption>
+							<a href="https://www.meese.pl" class="in-text" target="_blank">https://meese.pl</a>
+						</figcaption>
+						<div class="project-date"><i class="fas fa-calendar-check mr-1 "></i> 2021</div>
+						<div class="project-description">
+						<div>
+							<p class="plain-text">
+								Technologia: Vue.js
+							</p>
+						</div>
+						<img width="250px" max-height="250px" src="/assets/site1.bda2c247.jpg" alt="">
+						</div>
+					</figure>
+					<figure class="project-card">
+						<figcaption>
+							<a href="http://www.ziz-ngil.pl" class="in-text" target="_blank">http://ziz-ngil.pl</a>
+						</figcaption>
+						<div class="project-date"><i class="fas fa-calendar-check mr-1 "></i> 2018</div>
+						<div class="project-description">
+							<div>
+								<p class="plain-text">
+									Design klienta. Technologie: HTML, CSS, JS + PHP
+								</p>
+							</div>
+							<img width="250px" max-height="250px" src="/assets/site3.68c63385.jpg" alt="">
+						</div>
+					</figure>
+					<figure class="project-card">
+						<figcaption>
+							<a href="http://www.kwiatonek.pl" class="in-text" target="_blank">http://kwiatonek.pl</a>
+						</figcaption>
+						<div class="project-date"><i class="fas fa-calendar-check mr-1 "></i> 2007</div>
+						<div class="project-description">
+							<div>
+								<p class="plain-text">
+									Jedna z pierwszych stworzonych przeze mnie stron. Miałem wtedy 15 lat. Działa do dziś :)
+								</p>
+								<p class="plain-text">
+									Tochnologia: HTML (na tabelkach) + CSS
+								</p>
+							</div>
+							<img width="250px" max-height="250px" src="/assets/site2.542de4d6.jpg" alt="">
+						</div>
+					</figure>
+				</div>
+			</article>
+		</section>
+
+		<div class="space"></div>
+
+		<!-- technology -->
+		<section>
+			<h2 id="tech" class="mb-2">technologie</h2>
+			<ul class="technology-list">
+				<li><span class="tech-icon html"><i class="fab fa-html5"></i></span><span class="tech-desc">HTML</span></li>
+				<li><span class="tech-icon css"><i class="fab fa-css3-alt"></i></span><span class="tech-desc">CSS</span></li>
+				<li><span class="tech-icon js"><i class="fab fa-js"></i></span><span class="tech-desc">JavaScript</span></li>
+				<li><span class="tech-icon vue"><i class="fab fa-vuejs"></i></span><span class="tech-desc">Vue.js</span></li>
+				<li><span class="tech-icon node"><i class="fab fa-node"></i></span><span class="tech-desc">Node.js</span></li>
+				<li><span class="tech-icon"><i class="icon-graphql"></i></span><span class="tech-desc">GraphQL</span></li>
+				<li><span class="tech-icon"><i class="icon-mongodb"></i></span><span class="tech-desc">MongoDB</span></li>
+			</ul>
+		</section>
+
+		<div class="space"></div>
+
+		<!-- contact -->
+		<section>
+			<h2 id="contact">kontakt</h2>
+			<div>
+				<div>
+					<div class="plain-text text-center my-6">Zapraszam do kontaktu</div>
+					<h4>Alan Wnęk</h4>
+					<div class="contact-list my-4">
+						<div><span class="icon-sm"><i class="fas fa-envelope mr-2"></i></span> alan.wnek<span class="d-none">@</span><i
+								class="fas fa-at"></i>gmail.com</div>
+						<div><span class="icon-sm"><i class="fas fa-mobile-alt mr-2"></i></span> +48 663.045.753</div>
+						<div><a href="https://www.linkedin.com/in/alan-wn%C4%99k-797789150/" class="in-text" target="_blank"><span
+									class="icon-sm"><i class="fab fa-linkedin mr-2"></i></span> LinkedIn</a></div>
+						<div><a href="https://www.facebook.com/alainw92/" class="in-text" target="_blank"><span class="icon-sm"><i
+										class="fab fa-facebook-messenger mr-2"></i></span> Messenger</a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="space"></div>
+	</main>
+
+	<footer id="footer">
+		<div class="text-center mb-1 font-smaller privacy-link"><a id="privacy-dialog-trigger" class="in-text">Polityka prywatności</a></div>
+		<div class="text-center mb-2">&copy; 2022 Alan Wnęk. All rights reserved</div>
+	</footer>
+
+	<!-- privacy dialog -->
+	<section id="privacy" class="dialog" role="dialog" aria-modal="true">
+		<div class="dialog-box">
+			<article class="dialog-content">
+				<h2>polityka prywatności</h2>
+				<p>Niniejsza polityka prywatności i plików cookies opisuje zasady postępowania z danymi osobowymi oraz wykorzystywania
+				plików cookies i innych technologii w ramach strony internetowej <a href="https://alanwnek.com.pl">https://alanwnek.com.pl</a>
+				Administratorem strony jest Alan Wnęk. Kontakt z administratorem możliwy pod adresem e-mail alan.wnek@gmail.com.</p>
+				
+				<h4>§1 Definicje</h4>
+				<ol>
+					<li>Na potrzeby niniejszej polityki prywatności, przyjmuje się następujące znaczenie poniższych pojęć:
+						<ol type="a">
+							<li>Administrator – Alan Wnęk (alan.wnek@gmail.com)</li>
+							<li>Strona – strona internetowa dostępna pod adresem <a class="in-text" href="https://alanwnek.com.pl">https://alanwnek.com.pl</a></li>
+							<li>Użytkownik – każdy podmiot, który korzysta ze Strony.</li>
+						</ol>
+					</li>
+				</ol>
+				
+				<h4>§2 Dane osobowe</h4>
+				<ol>
+					<li class="plain-text">Użytkownik może przekazywać swoje dane osobowe Administratorowi za pomocą form kontaktu udostępnionych na stronie, np poprzez
+					e-mail.</li>
+					<li class="plain-text">Administratorem danych osobowych Użytkownika jest Administrator.</li>
+					<li class="plain-text">Administrator gwarantuje poufność wszelkich przekazanych mu danych osobowych.</li>
+					<li class="plain-text">Podanie danych jest zawsze dobrowolne, ale niezbędne do podjęcia przez Użytkownika akcji, do której przeznaczony jest
+					dany formularz.</li>
+					<li class="plain-text">Administrator nie udostępnia przekazanych mu danych jakimkolwiek podmiotom trzecim.</li>
+					<li class="plain-text">Dane osobowe są gromadzone z należytą starannością i odpowiednio chronione przed dostępem do nich przez osoby do tego
+					nieupoważnione.</li>
+					<li>Użytkownikowi przysługują następujące uprawnienia: 
+						<ol type="a">
+							<li class="plain-text">prawo do żądania dostępu do danych osobowych dotyczących osoby, której dane dotyczą, ich sprostowania, usunięcia lub ograniczenia przetwarzania,</li>
+							<li class="plain-text">prawo do wniesienia sprzeciwu wobec przetwarzania,</li>
+							<li class="plain-text">prawo do przenoszenia danych,</li>
+							<li class="plain-text">prawo do cofnięcia zgody na przetwarzanie danych osobowych w określonym celu, jeżeli Użytkownik uprzednio taką zgodę wyraził,</li>
+							<li class="plain-text">prawo do wniesienia skargi do organu nadzorczego w związku z przetwarzaniem danych osobowych przez Administratora</li>
+						</ol>
+					</li>
+				</ol>
+				
+				<h4>§3 Pliki cookies</h4>
+				<ol>
+					<li class="plain-text">Strona nie wykorzystuje plików cookies (tzw. ciasteczek).</li>
+				</ol>
+				
+				<h4>§4 Logi serwera</h4>
+				<ol>
+					<li class="plain-text">Korzystanie ze Strony wiąże się z przesyłaniem zapytań do serwera, na którym przechowywana jest Strona.</li>
+					<li class="plain-text">Każde zapytanie skierowane do serwera zapisywane jest w logach serwera. Logi obejmują m.in. adres IP Użytkownika,
+					datę i czas serwera, informacje o przeglądarce internetowej i systemie operacyjnym, z jakiego korzysta Użytkownik.</li>
+					<li class="plain-text">Logi zapisywane i przechowywane są na serwerze.</li>
+					<li class="plain-text">Dane zapisane w logach serwera nie są kojarzone z konkretnymi osobami korzystającymi ze Strony i nie są
+					wykorzystywane przez Administratora w celu identyfikacji Użytkownika.</li>
+					<li class="plain-text">Logi serwera stanowią wyłącznie materiał pomocniczy służący do administrowania Stroną, a ich zawartość nie jest
+					ujawniana nikomu poza osobami upoważnionymi do administrowania serwerem.</li>
+				</ol>
+			</article>
+			<div class="dialog-actions"><button id="privacy-btn-close">ZAMKNIJ</button></div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	
+	
+</body>
+</html>
