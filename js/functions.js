@@ -5,6 +5,9 @@ function updateOrnamentPosition() {
 	$(".aside__ornament").css("top", moveOrnamentPos);
 }
 
+let docHashStart = $(document)[0].location.hash;
+let isScrollByMenuClick = false;
+
 export default {
 	debounce(func, timeout = 50) {
 		let timer;
@@ -32,34 +35,69 @@ export default {
 		}
 	},
 
+	activateLink(link, mode = "scroll") {
+		let hash;
+		let docHash = $(document)[0].location.hash;
+		if (docHashStart) {
+			hash = docHashStart;
+		}
+		if ($(link)[0].hash) {
+			hash = $(link)[0].hash;
+		}
+		if (docHash) {
+			hash = docHash;
+		}
+
+		let linkList = $(".main-menu-list .menu-link");
+		let target = $(link).attr("href");
+		if (target === "#") {
+			target = "body";
+		}
+		let scrollOffset = $(target)[0].offsetTop;
+
+		let secondLastLinkHash = linkList[linkList.length - 2].hash;
+		let lastLinkHash = linkList.last()[0].hash;
+
+		linkList.removeClass("link--active");
+		if (hash === lastLinkHash && mode === "click") {
+			linkList.last().addClass("link--active");
+		} else if (hash === secondLastLinkHash && mode === "click") {
+			$('.main-menu-list .menu-link[href="' + secondLastLinkHash + '"]').addClass("link--active");
+		} else {
+			$(link).addClass("link--active");
+		}
+
+		if (mode === "click") {
+			isScrollByMenuClick = true;
+			window.scrollTo(0, scrollOffset);
+		}
+
+		this.moveOrnament();
+	},
+
 	matchLinkActive(scrollPos, windowHeight) {
+		if (isScrollByMenuClick) {
+			isScrollByMenuClick = false;
+			return;
+		}
 		$(".main-menu-list .menu-link").each((i, el) => {
 			let target = $(el).attr("href");
 			if (target === "#") {
 				target = "body";
 			}
+
 			let scrollOffset = $(target)[0].offsetTop;
-			let changeOffset = scrollOffset - windowHeight / 2;
+			let changeOffset = scrollOffset - 200;
 			let documentHeight = $("body")[0].clientHeight;
 			let countItems = $(".main-menu-list .menu-link").length;
 
 			if (scrollPos >= changeOffset) {
-				$(".main-menu-list .menu-link").removeClass("link--active");
-				$(el).addClass("link--active");
+				this.activateLink(el, "scroll");
 			}
-			if (scrollPos >= documentHeight - windowHeight - 50 && countItems === i + 1) {
-				$(".main-menu-list .menu-link").removeClass("link--active");
-				$(el).addClass("link--active");
+			if (scrollPos >= documentHeight - windowHeight && countItems === i + 1) {
+				this.activateLink(el, "scroll");
 			}
 		});
-
-		// on clicked link change class immidiately
-		$(".main-menu-list .menu-link").click((e) => {
-			$(".main-menu-list .menu-link").removeClass("link--active");
-			$(e.target).addClass("link--active");
-		});
-
-		this.moveOrnament();
 	},
 
 	moveOrnament() {

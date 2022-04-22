@@ -30,6 +30,17 @@ $(function () {
 		functions.closeMenuOnClick(e);
 	});
 
+	// on clicked link change class immidiately
+	$(".main-menu-list .menu-link").click((e) => {
+		e.preventDefault();
+		functions.activateLink(e.target, "click");
+	});
+	// on clicked scroll down
+	$("#scroll-down-btn").click((e) => {
+		e.preventDefault();
+		functions.activateLink($(".main-menu-list .menu-link[href='#about']")[0], "click");
+	});
+
 	// move single letters at the end of line to next line
 	functions.notBreakSingleChars();
 });

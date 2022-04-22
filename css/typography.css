@@ -49,7 +49,11 @@ a:hover {
 }
 a:focus {
 	text-decoration: none;
-	color: var(--hover-color);
+	color: var(--focus-color);
+}
+a.menu-link:focus {
+	text-decoration: none;
+	color: var(--accent-color);
 }
 a:active {
 	text-decoration: none;
