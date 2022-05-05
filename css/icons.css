@@ -16,7 +16,7 @@
 	display: block;
 	height: 1.2em;
 	width: 1em;
-	background-image: url('../assets/icon-graphql.svg');
+	background-image: url("../assets/icon-graphql.svg");
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -26,7 +26,17 @@
 	display: block;
 	height: 1.2em;
 	width: 1em;
-	background-image: url('../assets/icon-mongodb.svg');
+	background-image: url("../assets/icon-mongodb.svg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.icon-jquery {
+	display: block;
+	height: 1.2em;
+	width: 1em;
+	background-image: url("../assets/icon-jquery.svg");
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
